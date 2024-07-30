@@ -36,7 +36,7 @@ export default [
                     'ts-expect-error': 'allow-with-description',
                     'ts-ignore': true,
                     'ts-nocheck': true,
-                    'ts-check': true,          
+                    'ts-check': false,          
                     'minimumDescriptionLength': 5
                 }
             ]
