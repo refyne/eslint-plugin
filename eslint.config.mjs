@@ -30,7 +30,16 @@ export default [
         },
         rules: {
             "@typescript-eslint/no-explicit-any": "off", // turning off for now
-            "@typescript-eslint/ban-ts-comment": "off", // till decorator type issue is resolved
+            "@typescript-eslint/ban-ts-comment": [
+                "error",
+                {
+                    'ts-expect-error': 'allow-with-description',
+                    'ts-ignore': true,
+                    'ts-nocheck': true,
+                    'ts-check': true,          
+                    'minimumDescriptionLength': 5
+                }
+            ]
         },
     },
     {

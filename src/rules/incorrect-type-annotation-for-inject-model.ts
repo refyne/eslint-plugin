@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Rule } from 'eslint';
 
 const IncorrectTypeAnnotationForInjectModelRule: Rule.RuleModule = {
@@ -19,7 +18,9 @@ const IncorrectTypeAnnotationForInjectModelRule: Rule.RuleModule = {
                 const constructorParams = node.value.params;
 
                 for (const param of constructorParams) {
+                    // @ts-expect-error decorator is not typed
                     const injectModel = param.decorators.find(
+                        // @ts-expect-error decorator is not typed
                         (decorator) =>
                             decorator.expression.callee.name === 'InjectModel',
                     );
@@ -27,6 +28,7 @@ const IncorrectTypeAnnotationForInjectModelRule: Rule.RuleModule = {
                     if (!injectModel) continue;
 
                     const typeAnnotationName =
+                        // @ts-expect-error decorator is not typed
                         param?.parameter?.typeAnnotation?.typeAnnotation
                             ?.typeName?.name;
 
@@ -52,6 +54,7 @@ const IncorrectTypeAnnotationForInjectModelRule: Rule.RuleModule = {
                         */
                         context.report({
                             node: node,
+                            // @ts-expect-error decorator is not typed
                             message: `Incorrect type annotation found for Inject Model: ${param.parameter.name}`,
                         });
                     }

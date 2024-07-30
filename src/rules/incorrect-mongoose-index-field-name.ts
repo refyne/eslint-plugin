@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Rule } from 'eslint';
 import { flatten, isEmpty } from 'lodash';
 import { AST_NODE_TYPES } from '@typescript-eslint/utils';
@@ -28,19 +27,23 @@ const IncorrectMongooseIndexFieldNameRule: Rule.RuleModule = {
 
         // Traverse the AST to find all property defination inside class declaration child nodes and collect their key names
         function collectPropertyNames(node: any) {
+            // @ts-expect-error decorator is not typed
             const classDeclarationNodes = node.body.filter(
                 (node) =>
                     node.declaration?.type === AST_NODE_TYPES.ClassDeclaration,
             );
 
+            // @ts-expect-error decorator is not typed
             const classPropertyNodes = flatten(
                 classDeclarationNodes.map((node) => node.declaration.body.body),
             );
             const propertyDefinitionNodes = classPropertyNodes.filter(
+                // @ts-expect-error decorator is not typed
                 (node) => node.type === AST_NODE_TYPES.PropertyDefinition,
             );
 
             for (const propertyNode of propertyDefinitionNodes) {
+                // @ts-expect-error decorator is not typed
                 propertyNames.push(propertyNode.key.name);
             }
         }
@@ -52,12 +55,14 @@ const IncorrectMongooseIndexFieldNameRule: Rule.RuleModule = {
             },
             CallExpression(node) {
                 if (
+                    // @ts-expect-error decorator is not typed
                     node.callee?.property?.name !== 'index' ||
                     isEmpty(node.arguments)
                 )
                     return;
 
                 // finding out indexes
+                // @ts-expect-error decorator is not typed
                 for (const property of node.arguments[0].properties) {
                     const indexFieldName =
                         property.key.value ?? property.key.name;

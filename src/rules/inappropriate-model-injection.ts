@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Rule } from 'eslint';
 
 const InappropriateModelInjectionRule: Rule.RuleModule = {
@@ -19,7 +18,9 @@ const InappropriateModelInjectionRule: Rule.RuleModule = {
                 const constructorParams = node.value.params;
 
                 for (const param of constructorParams) {
+                    // @ts-expect-error decorator is not typed
                     const injectModel = param.decorators.find(
+                        // @ts-expect-error decorator is not typed
                         (decorator) =>
                             decorator.expression.callee.name === 'InjectModel',
                     );
@@ -27,6 +28,7 @@ const InappropriateModelInjectionRule: Rule.RuleModule = {
                     if (injectModel) {
                         context.report({
                             node: node,
+                            // @ts-expect-error decorator is not typed
                             message: `Inappropriate injection of model: ${param.parameter.name}`,
                         });
                     }

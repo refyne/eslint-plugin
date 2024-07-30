@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Rule } from 'eslint';
 
 const getForwardRefArgumentType = (argument: any) => {
@@ -27,13 +26,16 @@ const IncorrectForwardRefDecoratorUsageRule: Rule.RuleModule = {
                 const constructorParams = node.value.params;
 
                 for (const param of constructorParams) {
+                    // @ts-expect-error decorator is not typed
                     const forwardRefDecorator = param.decorators.find(
+                        // @ts-expect-error decorator is not typed
                         (decorator) =>
                             decorator.expression.arguments[0].callee?.name ===
                             'forwardRef',
                     );
                     if (!forwardRefDecorator) continue;
 
+                    // @ts-expect-error pattern parameter is not typed
                     const forwardRefAnnotationType =
                         getForwardRefDecoratorAnnotationType(param.parameter);
                     const forwardRefArgumentType = getForwardRefArgumentType(
