@@ -6,9 +6,9 @@ The repository includes custom ESLint rules, written in TypeScript, designed to 
 
 **File Structure**:
 
-- `docs/rules/` for documentation.
-- `src/rules/` for rule definitions.
-- `tests/` for tests for `src/`.
+-   `docs/rules/` for documentation.
+-   `src/rules/` for rule definitions.
+-   `tests/` for tests for `src/`.
 
 ---
 
@@ -22,8 +22,8 @@ $ npm install --save-dev @refyne/eslint-plugin
 
 ### Requirements
 
-- Node.js v18.10.0
-- ESLint
+-   Node.js v18.10.0
+-   ESLint
 
 ## Usage
 
@@ -42,4 +42,4 @@ See also [Configuring ESLint](https://eslint.org/docs/user-guide/configuring).
 
 ### Development Tools
 
-- `npm test` runs tests.
+-   `npm test` runs tests.

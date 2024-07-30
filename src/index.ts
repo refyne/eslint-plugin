@@ -6,16 +6,16 @@ import IncorrectTypeAnnotationForInjectModelRule from './rules/incorrect-type-an
 import IncorrectForwardRefDecoratorUsageRule from './rules/incorrect-forward-ref-decorator-usage';
 
 export const configs = {
-  recommended,
+    recommended,
 };
 
 export const rules = {
-  'inconsistent-mongoose-type-declaration':
-    InconsistentMongooseTypeDeclarationRule,
-  'incorrect-mongoose-index-field-name': IncorrectMongooseIndexFieldNameRule,
-  'inappropriate-model-injection': InappropriateModelInjectionRule,
-  'incorrect-type-annotation-for-injection-model':
-    IncorrectTypeAnnotationForInjectModelRule,
-  'incorrect-forward-ref-decorator-usage':
-    IncorrectForwardRefDecoratorUsageRule,
+    'inconsistent-mongoose-type-declaration':
+        InconsistentMongooseTypeDeclarationRule,
+    'incorrect-mongoose-index-field-name': IncorrectMongooseIndexFieldNameRule,
+    'inappropriate-model-injection': InappropriateModelInjectionRule,
+    'incorrect-type-annotation-for-injection-model':
+        IncorrectTypeAnnotationForInjectModelRule,
+    'incorrect-forward-ref-decorator-usage':
+        IncorrectForwardRefDecoratorUsageRule,
 };
