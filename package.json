@@ -1,6 +1,6 @@
 {
   "name": "@refyne/eslint-plugin",
-  "version": "1.0.6",
+  "version": "0.0.1",
   "description": "Refyne recommendedcustom eslint plugin",
   "engines": {
     "node": ">=18.10.0"

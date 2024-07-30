@@ -43,7 +43,3 @@ See also [Configuring ESLint](https://eslint.org/docs/user-guide/configuring).
 ### Development Tools
 
 - `npm test` runs tests.
-
-### TODO
-
-Modify readme to have each rule details here.
