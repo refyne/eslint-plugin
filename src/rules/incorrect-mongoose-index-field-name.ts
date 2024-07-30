@@ -27,14 +27,14 @@ const IncorrectMongooseIndexFieldNameRule: Rule.RuleModule = {
 
         // Traverse the AST to find all property defination inside class declaration child nodes and collect their key names
         function collectPropertyNames(node: any) {
-            // @ts-expect-error decorator is not typed
             const classDeclarationNodes = node.body.filter(
+                // @ts-expect-error decorator is not typed
                 (node) =>
                     node.declaration?.type === AST_NODE_TYPES.ClassDeclaration,
             );
 
-            // @ts-expect-error decorator is not typed
             const classPropertyNodes = flatten(
+                // @ts-expect-error decorator is not typed
                 classDeclarationNodes.map((node) => node.declaration.body.body),
             );
             const propertyDefinitionNodes = classPropertyNodes.filter(

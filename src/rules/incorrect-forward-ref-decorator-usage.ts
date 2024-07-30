@@ -35,8 +35,8 @@ const IncorrectForwardRefDecoratorUsageRule: Rule.RuleModule = {
                     );
                     if (!forwardRefDecorator) continue;
 
-                    // @ts-expect-error pattern parameter is not typed
                     const forwardRefAnnotationType =
+                        // @ts-expect-error decorator is not typed
                         getForwardRefDecoratorAnnotationType(param.parameter);
                     const forwardRefArgumentType = getForwardRefArgumentType(
                         forwardRefDecorator.expression.arguments[0],
