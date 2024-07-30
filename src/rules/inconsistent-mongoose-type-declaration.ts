@@ -1,6 +1,6 @@
-import { isEmpty, isEqual, replace } from 'lodash';
 import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 import { Rule } from 'eslint';
+import { isEmpty, isEqual, replace } from 'lodash';
 
 const getPropertiesFromArguments = (args: any) => {
     if (isEmpty(args)) return {};
