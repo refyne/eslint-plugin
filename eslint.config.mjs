@@ -30,6 +30,10 @@ export default [
         },
         rules: {
             "@typescript-eslint/no-explicit-any": "off", // turning off for now
-        }
+            "@typescript-eslint/ban-ts-comment": "off", // till decorator type issue is resolved
+        },
     },
+    {
+        ignores: ["**/node_modules/**", "**/dist/**"],
+    }
 ];
