@@ -12,7 +12,7 @@ const compat = new FlatCompat({
     baseDirectory: __dirname,
     recommendedConfig: js.configs.recommended,
     allConfig: js.configs.all
-});
+})
 
 export default [
     ...compat.extends("eslint:recommended", "plugin:@typescript-eslint/recommended"),
