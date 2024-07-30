@@ -19,8 +19,8 @@
         "lint:eslint": "eslint '**/*.{js,ts}'",
         "lint:prettier": "prettier '**/*.{js,ts,json,yaml,md}'",
         "fix": "run-s fix:eslint fix:prettier",
-        "fix:eslint": "yarn run lint:eslint -- --fix",
-        "fix:prettier": "yarn run lint:prettier -- --write",
+        "fix:eslint": "yarn run lint:eslint --fix",
+        "fix:prettier": "yarn run lint:prettier --write",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
@@ -50,7 +50,7 @@
     },
     "lint-staged": {
         "*.{js,ts}": [
-            "lint --fix",
+            "eslint --fix",
             "prettier --write"
         ],
         "*.{json,yaml,md}": [
