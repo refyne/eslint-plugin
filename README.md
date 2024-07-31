@@ -1,4 +1,4 @@
-## Refyne Eslint Plugin.
+## Refyne Eslint Plugin
 
 The repository includes custom ESLint rules, written in TypeScript, designed to serve as guardrails. These rules help prevent errors and avoid mistakes when working with NestJS and Mongoose.
 
