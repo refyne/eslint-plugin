@@ -4,7 +4,7 @@ Enforce strict required type matching between mongoose and typescript
 
 ## Rule Details
 
-This rule aimed at detecting inconsistent mongoose field required type declaration in schema.
+This rule aimed at detecting inconsistent mongoose field required type declaration in schema as nethier typescript or mongoose complains about it.
 
 ### Valid
 
