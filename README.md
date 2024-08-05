@@ -14,7 +14,7 @@ The repository includes custom ESLint rules, written in TypeScript, designed to 
 
 ## Installation
 
-Use [npm](https://www.npmjs.com/) or a compatibility tool to install.
+Use [npm](https://www.npmjs.com/) or a compatible tool to install.
 
 ```
 $ npm install --save-dev @refyne/eslint-plugin
@@ -50,13 +50,13 @@ Automatically fixable by the
 Manually fixable by
 [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
 
-| Name                                                                                           | Description                                                   | 💼  | 🔧  | 💡  |
-| :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------ | :-- | :-- | :-- |
-| [inconsistent-mongoose-type-declaration](docs/rules/inconsistent-mongoose-type-declaration.md) | Detects inconsistent mongoose types in schema                 | ✅  |     | 💡  |
-| incorrect-mongoose-index-field-name                                                            | Flags incorrect mongoose index creation on non-existing field | ✅  |     |     |
-| inappropriate-model-injection                                                                  | Restricts model injection in certain files                    | ✅  |     |     |
-| incorrect-type-annotation-for-injection-model                                                  | Flags incorrect injection model type in constructor           | ✅  |     | 💡  |
-| incorrect-forward-ref-decorator-usage                                                          | Flags incorrect usage of forwardRef decorator in constructor  | ✅  |     | 💡  |
+| Name                                                                                                                                               | Description                                                   | 💼  | 🔧  | 💡  |
+| :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------ | :-- | :-- | :-- |
+| [inconsistent-mongoose-type-declaration](https://github.com/refyne/eslint-plugin/blob/master/docs/rules/inconsistent-mongoose-type-declaration.md) | Detects inconsistent mongoose types in schema                 | ✅  |     | 💡  |
+| incorrect-mongoose-index-field-name                                                                                                                | Flags incorrect mongoose index creation on non-existing field | ✅  |     |     |
+| inappropriate-model-injection                                                                                                                      | Restricts model injection in certain files                    | ✅  |     |     |
+| incorrect-type-annotation-for-injection-model                                                                                                      | Flags incorrect injection model type in constructor           | ✅  |     | 💡  |
+| incorrect-forward-ref-decorator-usage                                                                                                              | Flags incorrect usage of forwardRef decorator in constructor  | ✅  |     | 💡  |
 
 ### Development Tools
 

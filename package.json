@@ -69,5 +69,10 @@
     "license": "MIT",
     "dependencies": {
         "lodash": "^4.17.21"
-    }
+    },
+    "repository": "github:refyne/eslint-plugin",
+    "bugs": {
+        "url": "https://github.com/refyne/eslint-plugin/issues"
+    },
+    "homepage": "https://github.com/refyne/eslint-plugin#readme"
 }
