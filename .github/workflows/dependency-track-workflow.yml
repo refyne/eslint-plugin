@@ -1,6 +1,8 @@
 name: Generate and Upload SBOM to Dependency Track 
 
 on:
+    pull_request:
+     types: [opened, synchronize, reopened] 
     push:
         branches:
             - master  
@@ -8,7 +10,7 @@ on:
 jobs:
     SBOM_Orchestrator: 
         name: SBOM Generation and Deployment 
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout Source Code
               uses: actions/checkout@v3
