@@ -1,8 +1,6 @@
 name: Generate and Upload SBOM to Dependency Track 
 
 on:
-    pull_request:
-     types: [opened, synchronize, reopened] 
     push:
         branches:
             - master  
