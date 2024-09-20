@@ -26,9 +26,9 @@ jobs:
             - name: Upload SBOM to Dependency-Track
               uses: DependencyTrack/gh-upload-sbom@v3.0.0
               with:
-                serverHostname: 'dependency-track.uat.refyne.co.in'
+                serverHostname: ${{secrets.DP_TRACK_BASE_URL}}
                 apiKey: ${{ secrets.DP_TRACK_TOKEN }}
-                projectName: 'Eslint - Plugin'
+                projectName: 'eslint-plugin'
                 projectVersion: '1.0'
                 bomFilename: "bom.json"  
                 autoCreate: true
