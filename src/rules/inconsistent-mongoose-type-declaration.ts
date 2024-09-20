@@ -33,7 +33,7 @@ const InconsistentMongooseTypeDeclarationRule: Rule.RuleModule = {
     create: (context) => {
         return {
             Decorator: (node: any) => {
-                if (node.expression.callee.name === 'Prop') {
+                if (node.expression.callee?.name === 'Prop') {
                     const propArguments = node.expression.arguments;
 
                     const typeDeclaration = context.sourceCode.getText(node);
