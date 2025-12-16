@@ -5,5 +5,6 @@ export const recommended = {
         '@refyne/inappropriate-model-injection': 'error',
         '@refyne/incorrect-type-annotation-for-injection-model': 'error',
         '@refyne/incorrect-forward-ref-decorator-usage': 'error',
+        '@refyne/dto-validation': 'error',
     },
 };

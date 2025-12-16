@@ -4,6 +4,7 @@ import IncorrectMongooseIndexFieldNameRule from './rules/incorrect-mongoose-inde
 import InappropriateModelInjectionRule from './rules/inappropriate-model-injection';
 import IncorrectTypeAnnotationForInjectModelRule from './rules/incorrect-type-annotation-for-inject-model';
 import IncorrectForwardRefDecoratorUsageRule from './rules/incorrect-forward-ref-decorator-usage';
+import DtoValidationRule from './rules/dto-validation.rule';
 
 export const configs = {
     recommended,
@@ -18,4 +19,5 @@ export const rules = {
         IncorrectTypeAnnotationForInjectModelRule,
     'incorrect-forward-ref-decorator-usage':
         IncorrectForwardRefDecoratorUsageRule,
+    'dto-validation': DtoValidationRule,
 };
