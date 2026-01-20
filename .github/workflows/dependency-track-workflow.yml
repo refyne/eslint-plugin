@@ -1,0 +1,34 @@
+name: Generate and Upload SBOM to Dependency Track 
+
+on:
+    push:
+        branches:
+            - master  
+
+jobs:
+    SBOM_Orchestrator: 
+        name: SBOM Generation and Deployment 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Source Code
+              uses: actions/checkout@v3
+
+            - name: Configure Node.js Enviroment
+              uses: actions/setup-node@v3
+              with:
+                node-version: '20'
+            - name: Install CycloneDX SBOM Generator
+              run : npm install -g @cyclonedx/cdxgen
+
+            - name: Generate SBOM file 
+              run : cdxgen -o bom.json . 
+
+            - name: Upload SBOM to Dependency-Track
+              uses: DependencyTrack/gh-upload-sbom@v3.0.0
+              with:
+                serverHostname: ${{secrets.DP_TRACK_BASE_URL}}
+                apiKey: ${{ secrets.DP_TRACK_TOKEN }}
+                projectName: 'eslint-plugin'
+                projectVersion: '1.0'
+                bomFilename: "bom.json"  
+                autoCreate: true
