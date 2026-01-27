@@ -5,6 +5,7 @@ import InappropriateModelInjectionRule from './rules/inappropriate-model-injecti
 import IncorrectTypeAnnotationForInjectModelRule from './rules/incorrect-type-annotation-for-inject-model';
 import IncorrectForwardRefDecoratorUsageRule from './rules/incorrect-forward-ref-decorator-usage';
 import DtoValidationRule from './rules/dto-validation.rule';
+import NoUnusedDependencyInjections from './rules/no-unused-dependency-injection';
 
 export const configs = {
     recommended,
@@ -20,4 +21,5 @@ export const rules = {
     'incorrect-forward-ref-decorator-usage':
         IncorrectForwardRefDecoratorUsageRule,
     'dto-validation': DtoValidationRule,
+    'no-unused-dependency-injection': NoUnusedDependencyInjections,
 };
